@@ -365,6 +365,10 @@
 				return;
 			}
 
+			if (typeof data[this.opts.dataName] !== 'undefined') {
+				data = data[this.opts.dataName];
+			}
+
 			if (this.opts.textOnly) {
 				element.text(data);
 			} else {
