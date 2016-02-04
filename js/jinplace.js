@@ -441,7 +441,7 @@
 			return $.ajax(opts.url, {
 				type: opts.method,
 				data: requestParams(opts, value),
-				dataType: 'text',
+				dataType: opts.name !== 'value' ? 'json' : 'text',
 
 				// iOS 6 has a dreadful bug where POST requests are not sent to the
 				// server if they are in the cache.
