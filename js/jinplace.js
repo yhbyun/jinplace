@@ -78,7 +78,8 @@
 		'activator',
 		'textOnly',
 		'placeholder',
-		'submitFunction'
+		'submitFunction',
+		'method'
 	];
 
 	/**
@@ -414,6 +415,7 @@
 		type: "input",
 		textOnly: true,
 		placeholder: '[ --- ]',
+		method: "post",
 
 		/**
 		 * @name Options.submitFunction
@@ -429,7 +431,7 @@
 		 */
 		submitFunction: function(opts, value) {
 			return $.ajax(opts.url, {
-				type: "post",
+				type: opts.method,
 				data: requestParams(opts, value),
 				dataType: 'text',
 
