@@ -367,6 +367,8 @@
 
 			if (typeof data[this.opts.name] !== 'undefined') {
 				data = data[this.opts.name];
+			} else if (data.data && typeof data.data[this.opts.name] !== 'undefined') {
+				data = data.data[this.opts.name];
 			}
 
 			if (this.opts.textOnly) {
