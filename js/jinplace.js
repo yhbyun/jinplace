@@ -80,7 +80,7 @@
 		'placeholder',
 		'submitFunction',
 		'method',
-		'dataName'
+		'name'
 	];
 
 	/**
@@ -365,8 +365,8 @@
 				return;
 			}
 
-			if (typeof data[this.opts.dataName] !== 'undefined') {
-				data = data[this.opts.dataName];
+			if (typeof data[this.opts.name] !== 'undefined') {
+				data = data[this.opts.name];
 			}
 
 			if (this.opts.textOnly) {
@@ -396,7 +396,7 @@
 		if ($.isPlainObject(value)) {
 			$.extend(params, value);
 		} else if (value !== undefined) {
-			params[opts.dataName] = value;
+			params[opts.name] = value;
 		}
 
 		return params;
@@ -421,7 +421,7 @@
 		textOnly: true,
 		placeholder: '[ --- ]',
 		method: "post",
-		dataName: "value",
+		name: "value",
 
 		/**
 		 * @name Options.submitFunction
