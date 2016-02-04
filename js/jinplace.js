@@ -80,7 +80,7 @@
 		'placeholder',
 		'submitFunction',
 		'method',
-		'valueName'
+		'dataName'
 	];
 
 	/**
@@ -392,7 +392,7 @@
 		if ($.isPlainObject(value)) {
 			$.extend(params, value);
 		} else if (value !== undefined) {
-			params[opts.valueName] = value;
+			params[opts.dataName] = value;
 		}
 
 		return params;
@@ -417,7 +417,7 @@
 		textOnly: true,
 		placeholder: '[ --- ]',
 		method: "post",
-		valueName: "value",
+		dataName: "value",
 
 		/**
 		 * @name Options.submitFunction
